@@ -1,0 +1,37 @@
+*{
+	margin: 0px;
+}
+div{
+	margin:10px;
+}
+li{
+	list-style: none;
+	line-height: 30px
+}
+.addtodo input{
+	width: 400px;
+	height: 30px;
+	border-radius: 3px;
+	border: solid 1px silver;
+	line-height: 30px;
+	margin:0px;
+}
+.tasks{
+	display: block;
+	width: 900px;
+	height: 400px;
+}
+.incomplete{
+	display: inline-block;
+	width: 400px;
+	height: 400px;
+	vertical-align:top;
+	border: 1px solid silver;
+}
+.complete{
+	display: inline-block;
+	width: 400px;
+	height: 400px;
+	vertical-align:top;
+	border: 1px solid silver;
+}

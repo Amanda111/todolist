@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>todo</title>
+  <script src="vue.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="todo.css">
+</head>
+<body>
+<div id="app">
+    <div class="addtodo">
+      <div>what are you going to do today? write it down:)</div>
+      <input type="text" v-model="newTodo">
+      <button v-on:click="addTodo">add task</button>
+      <button v-on:click="finishAll">finish all</button>
+    </div>
+    <div class="tasks">
+      <div class="incomplete">
+        <ul>
+          <li v-for="todo in todos | inProgress ">
+            <span>{{ todo.text }} </span>
+            <button v-on:click="removeTodo(todo)">delete</button>
+            <button v-on:click="finish(todo)">finish</button>
+          </li>
+        </ul>
+      </div>
+      <div class="complete">
+        <ul>
+          <li v-for="todo in todos | taskCompleted">
+            <span>{{ todo.text }} </span>
+            <button v-on:click="undo(todo)">undo</button>
+          </li>
+        </ul>
+      </div>
+    </div>
+</div>
+<script type="text/javascript" src="todo.js"></script>
+</body>
+</html>
